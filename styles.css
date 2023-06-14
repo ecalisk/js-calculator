@@ -1,0 +1,98 @@
+/* - - - - * 
+ March 2021, Internet Techniques
+ * - - - - *
+ STUDENT:
+ Emirhan Caliskan
+ * - - - - *
+ ALBUM NO:
+ 56140
+ * - - - - *
+ DESCRIPTION:
+ Simple calculator app that can perform several operations.
+*/
+
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background: linear-gradient(to left, rgb(168, 199, 131), rgb(131, 185, 199));
+}
+
+.panel {
+  min-height: 100vh;
+  align-content: center;
+  justify-content: center;
+
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: minmax(auto, auto) repeat(5, 100px);
+}
+
+#calc-btn {
+  grid-column: span 2;
+}
+
+.functional-button {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, 225px);
+  grid-template-rows: repeat(1, 100px);
+}
+
+.input-boxes {
+  background-color: transparent;
+  height: 110px;
+  width: 450px;
+}
+
+input[type="text"] {
+  height: 100px;
+  width: 195px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 42pt;
+  font-style: italic;
+  position: sticky;
+}
+
+.panel > button,
+.functional-button > button {
+  background-color: rgb(192, 252, 241, 1);
+  font-size: 2rem;
+  cursor: pointer;
+  border: 1px solid rgba(195, 204, 219, 1);
+  outline: none;
+}
+
+.panel > button:hover,
+.functional-button > button:hover {
+  background-color: rgb(192, 252, 241, 0.5);
+}
+
+#operator-display {
+  font-weight: 600;
+  font-size: 24pt;
+}
+
+.output-display {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 150px;
+  width: 450px;
+}
+
+#result-display {
+  text-align: center;
+  overflow-wrap: break-word;
+  font-style: italic;
+  font-size: large;
+}
+
+#output-indicator {
+  font-size: medium;
+  font-weight: 600;
+}

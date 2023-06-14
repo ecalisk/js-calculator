@@ -1,0 +1,56 @@
+<!--
+ March 2021, Internet Techniques
+ * - - - - *
+ STUDENT:
+ Emirhan Caliskan
+ * - - - - *
+ ALBUM NO:
+ 56140
+ * - - - - *
+ DESCRIPTION:
+ Simple calculator app that can perform several operations.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="panel">
+      <div class="input-boxes">
+        <input type="text" name="textBox1" id="text-box1" />
+        <label for="" id="operator-display" onclick="clearOperator()"
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+        >
+        <input type="text" name="textBox2" id="text-box2" />
+      </div>
+      <div class="functional-button">
+        <button onclick="clearButton()">CLEAR</button>
+        <button onclick="swapButton()">SWAP</button>
+      </div>
+      <button onclick="saveOperator('+')">+</button>
+      <button onclick="saveOperator('-')">-</button>
+      <button onclick="saveOperator('*')">*</button>
+      <button onclick="saveOperator('/')">/</button>
+      <button onclick="saveOperator('!')">!</button>
+      <button onclick="saveOperator('^')">^</button>
+      <button onclick="saveOperator('%')">%</button>
+      <button onclick="saveOperator('log')">log</button>
+      <button onclick="saveOperator('lcm')">lcm</button>
+      <button onclick="saveOperator('gcd')">gcd</button>
+      <button id="calc-btn" onclick="calculateButton()">CALCULATE</button>
+      <div class="output-display">
+        <label for="" id="output-indicator" onclick="clearResults()"
+          >OUTPUT:
+        </label>
+        <label for="" id="result-display">23456</label>
+      </div>
+    </div>
+  </body>
+</html>
